@@ -104,7 +104,35 @@ http://127.0.0.1:8000/redoc
 These interfaces allow you to explore and test the API endpoints directly from your browser.
 
 ---
+## Example API Request
 
+### Create Candidate
+
+Endpoint:
+
+POST /candidates
+
+Example Form Data:
+
+name = Jephy Joseph  
+email = jephy@email.com  
+skills = python, fastapi  
+years_of_experience = 1  
+graduation_year = 2026  
+resume = resume.pdf
+### 2. Filter Candidates by Skill
+
+GET /candidates?skill=python
+
+Returns candidates who have the skill *python*.
+
+---
+
+### 3. Filter Candidates by Experience
+
+GET /candidates?min_experience=2
+
+Returns candidates with *2 or more years of experience*.
 ## Database
 
 The application uses **SQLite** as the database and **SQLAlchemy ORM** for database interactions.
